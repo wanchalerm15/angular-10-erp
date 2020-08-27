@@ -10,6 +10,9 @@ import { SharedsModule } from 'src/app/shareds/shareds.module';
     CommonModule,
     RouterModule,
     SharedsModule
+  ],
+  exports: [
+    Layout1Component
   ]
 })
 export class Layout1Module { }

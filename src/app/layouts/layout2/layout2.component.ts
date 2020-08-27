@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-layout2',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./layout2.component.scss']
 })
 export class Layout2Component implements OnInit {
+
+  @Input('title') title: string = 'No title';
 
   constructor() { }
 

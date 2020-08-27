@@ -3,8 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { InfoComponent } from './components/info/info.component';
 import { AccountURL } from './account.url';
-import { Layout1Component } from '../../layouts/layout1/layout1.component';
-import { Layout1Module } from '../../layouts/layout1/layout1.module';
 
 const children: Routes = [
   { path: AccountURL.home, component: HomeComponent },
@@ -12,12 +10,9 @@ const children: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild([
-    { path: '', component: Layout1Component, children }
-  ])],
+  imports: [RouterModule.forChild(children)],
   exports: [
-    RouterModule,
-    Layout1Module
+    RouterModule
   ]
 })
 export class AccountRoutingModule { }
